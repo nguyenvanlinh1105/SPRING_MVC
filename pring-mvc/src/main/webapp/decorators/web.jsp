@@ -4,9 +4,19 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Trang chủ</title>
+  <!-- Bootstrap core CSS -->
+  <link href="<c:url value ='/template/web/vendor/bootstrap/css/bootstrap.min.css'/> " rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="<c:url value ='/template/web/css/small-business.css'/>"  rel="stylesheet">
+  
 </head>
 <body>
 
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="<c:url value ='/template/web/vendor/jquery/jquery.min.js'/>"></script>
+  <script src="<c:url value ='/template/web/vendor/bootstrap/js/bootstrap.bundle.min.js'/>"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-package com.linhnguyen.controller;
+package com.linhnguyen.controller.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -9,7 +9,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class HomeController {
 	@RequestMapping(value = "/trang-chu", method = RequestMethod.GET)
 	   public ModelAndView homePage() {
-	      ModelAndView mav = new ModelAndView("home");
+	      ModelAndView mav = new ModelAndView("web/home.jsp");
 	      return mav;
 	   }
 	  
