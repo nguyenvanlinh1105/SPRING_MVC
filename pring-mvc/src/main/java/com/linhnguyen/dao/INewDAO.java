@@ -13,6 +13,7 @@ public interface INewDAO extends GenericDAO<newsModel>{
 	void update (newsModel updateNew);
 	void delete( long id);
 	List<newsModel> findAll(Pageble pageble);
+	List<newsModel> findAll();
 	int getToltalItem ();
 	
 }

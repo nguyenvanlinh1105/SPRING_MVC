@@ -74,34 +74,21 @@
 															<td><input type="checkbox" id="check_${item.id}" value="${item.id}"></td>
 															<td>${item.title}</td>
 															<td>${item.shortdescription}</td>
-															<td>
-																	<c:url var="editURL" value="/admin-new">
-																		<c:param name="type" value="edit"/>
-																		<c:param name="id" value="${item.id}"/>
-																	</c:url>
-																	<a class="btn btn-sm btn-primary btn-edit" data-toggle="tooltip"
-																	   title="Cập nhật bài viết" href='${editURL}'><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-																	</a>
-																</td>
+															<td>																	
+																<a class="btn btn-sm btn-primary btn-edit" data-toggle="tooltip"
+																   title="Cập nhật bài viết" href='${editURL}'><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+																</a>
+															</td>
 														</tr>
 													</c:forEach>
-
 												</tbody>
 											</table>
-											<ul class="pagination" id="pagination"></ul>
-											<input type="hidden" value="" id="type" name="type">
-											<input type="hidden" value="" id="page" name="page">
-											<input type="hidden" value="" id="maxPageItem" name="maxPageItem">
-											<input type="hidden" value="" id="sortName" name="sortName">
-											<input type="hidden" value="" id="sortBy" name="sortBy">
-
-										</div>
 										</div>
 									</div>
 								</div>
 							</div>
-
 						</div>
+					</div>
 				</div>
 		</form>
 		</div>

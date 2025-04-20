@@ -20,7 +20,7 @@ public class abstracModel<T> {
 	private String message;
 	private String alert;
 	private String type;
-	
+	private List<T> listResult=new ArrayList<T>();	
 	
 	
 	public String getMessage() {
@@ -78,7 +78,7 @@ public class abstracModel<T> {
 	public void setToltalItem(Integer toltalItem) {
 		this.toltalItem = toltalItem;
 	}
-	private List<T> listResult=new ArrayList<T>();	
+	
 	public List<T> getListResult() {
 		return listResult;
 	}

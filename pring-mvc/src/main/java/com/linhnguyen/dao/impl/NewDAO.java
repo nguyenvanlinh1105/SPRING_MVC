@@ -3,12 +3,14 @@ package com.linhnguyen.dao.impl;
 import java.util.List;
 
 import org.apache.commons.lang.StringUtils;
+import org.springframework.stereotype.Repository;
 
 import com.linhnguyen.dao.INewDAO;
 import com.linhnguyen.mapper.NewMapper;
 import com.linhnguyen.model.newsModel;
 import com.linhnguyen.paging.Pageble;
 
+@Repository
 public class NewDAO extends AbstractDAO<newsModel> implements INewDAO {
 
 	@Override
@@ -68,6 +70,14 @@ public class NewDAO extends AbstractDAO<newsModel> implements INewDAO {
 
 	    return query(sql.toString(), new NewMapper());
 	}
+	
+	@Override
+	public List<newsModel> findAll() {
+	    StringBuilder sql = new StringBuilder("SELECT * FROM news");
+
+	    return query(sql.toString(), new NewMapper());
+	}
+	
 
 
 	@Override
