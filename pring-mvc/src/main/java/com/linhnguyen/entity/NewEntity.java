@@ -2,6 +2,7 @@ package com.linhnguyen.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Table;
 import javax.persistence.Id;
@@ -9,17 +10,62 @@ import javax.persistence.Id;
 @Table(name="new")
 public class NewEntity {
 //	from class -> db == same dotnet :))
+	// primary key & not null
 	@Id
-	@Ge(strategy = GenerationType.IDENTITY)
+//	Tăng tự động
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long Id;
-	@Column
+	
+	@Column(name="title")
 	private String title;
-	@Column
+	
+	@Column(name="thumnail")
 	private String thumnail;
-	@Column
+	
+	@Column(name="shortdescription")
 	private String shortDescription;
-	@Column
+	
+	@Column(name="content")
 	private String content;
+
+	public Long getId() {
+		return Id;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getThumnail() {
+		return thumnail;
+	}
+
+	public void setThumnail(String thumnail) {
+		this.thumnail = thumnail;
+	}
+
+	public String getShortDescription() {
+		return shortDescription;
+	}
+
+	public void setShortDescription(String shortDescription) {
+		this.shortDescription = shortDescription;
+	}
+
+	public String getContent() {
+		return content;
+	}
+
+	public void setContent(String content) {
+		this.content = content;
+	}
+	
+	
+	
 	
 	
 }
