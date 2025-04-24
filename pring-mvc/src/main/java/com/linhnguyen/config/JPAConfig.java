@@ -8,6 +8,7 @@ import javax.sql.DataSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.JpaVendorAdapter;
@@ -16,6 +17,9 @@ import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
+// để sử dụng được jpaRepository thì ta phải config ở đây: jpaRepository là hàm chung.
+@EnableJpaRepositories(basePackages = {"com.linhnguyen.reppository"})
+//bật tính năng quản lí transaction của jpa
 @EnableTransactionManagement
 public class JPAConfig {
 	
@@ -46,7 +50,7 @@ public class JPAConfig {
 	public DataSource dataSource() {
 		DriverManagerDataSource  dataSource = new DriverManagerDataSource();
 		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-		dataSource.setUrl("jdbc:mysql://localhost:3306/pring-mvc-basic");
+		dataSource.setUrl("jdbc:mysql://localhost:3306/springmvcbasic");
 		dataSource.setUsername("root");
 		dataSource.setPassword("0387092630Linh");	
 		return dataSource;
