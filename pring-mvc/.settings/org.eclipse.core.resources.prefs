@@ -1,5 +1,6 @@
 eclipse.preferences.version=1
 encoding//src/main/java/com/linhnguyen/config/JPAConfig.java=UTF-8
+encoding//src/main/java/com/linhnguyen/entity/BaseEntity.java=UTF-8
 encoding//src/main/java/com/linhnguyen/entity/NewEntity.java=UTF-8
 encoding//src/main/java/com/linhnguyen/entity/RoleEntity.java=UTF-8
 encoding//src/main/java/com/linhnguyen/entity/UserEntity.java=UTF-8

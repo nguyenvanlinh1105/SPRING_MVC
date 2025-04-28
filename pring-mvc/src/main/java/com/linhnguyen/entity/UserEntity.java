@@ -1,5 +1,7 @@
 package com.linhnguyen.entity;
 
+import java.sql.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,13 +11,8 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="user")
-public class UserEntity {
-//	from class -> db == same dotnet :))
-	// primary key & not null
-	@Id
-//	Tăng tự động
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long Id;
+public class UserEntity extends BaseEntity {
+
 	
 	@Column(name="username")
 	private String userName;
@@ -29,10 +26,7 @@ public class UserEntity {
 	@Column(name="status")
 	private Integer status;
 
-	public Long getId() {
-		return Id;
-	}
-
+	
 	public String getUserName() {
 		return userName;
 	}
@@ -64,6 +58,7 @@ public class UserEntity {
 	public void setStatus(Integer status) {
 		this.status = status;
 	}
+
 	
 
 	

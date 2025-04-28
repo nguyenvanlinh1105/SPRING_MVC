@@ -2,19 +2,12 @@ package com.linhnguyen.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Table;
-import javax.persistence.Id;
 @Entity
 @Table(name="new")
-public class NewEntity {
+public class NewEntity extends BaseEntity {
 //	from class -> db == same dotnet :))
 	// primary key & not null
-	@Id
-//	Tăng tự động
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long Id;
 	
 	@Column(name="title")
 	private String title;
@@ -27,11 +20,7 @@ public class NewEntity {
 	
 	@Column(name="content", columnDefinition="text")
 	private String content;
-
-	public Long getId() {
-		return Id;
-	}
-
+	
 	public String getTitle() {
 		return title;
 	}
@@ -63,6 +52,9 @@ public class NewEntity {
 	public void setContent(String content) {
 		this.content = content;
 	}
+
+	
+
 	
 	
 	
